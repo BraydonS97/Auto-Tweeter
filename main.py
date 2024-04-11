@@ -38,14 +38,14 @@ def count_images_in_folder(folder):
 # Upload image to twitter and create tweet.
 def upload_image_and_create_tweet():
     # Meme Folder path
-    external_folder = 'O:/memes'
+    external_folder = 'YOUR_FOLDER_PATH'
 
     # Check the number of images in the folder
     num_images = count_images_in_folder(external_folder)
 
     # Warn if there are less than x imgs
     if num_images < 24:
-        print("WARNING: There are less than X imgs left in the folder")
+        print(f"WARNING: There are {num_images} Img's left in the folder")
 
     # Select a random image from the external folder
     image_path = select_random_image(external_folder)
