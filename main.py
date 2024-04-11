@@ -87,11 +87,10 @@ def upload_image_and_create_tweet():
     print("Paragraph's Remaining: ", str(len(paragraphs)), " Img's Remaining: ", num_images)
 
 
-# posting_time = input("Enter the minute interval (00-59): ")
+posting_time = input("Enter the minute interval (00-59): ")
 
 # Schedule the bot to run every hour on the hour
-schedule.every().hour.at(f":32").do(upload_image_and_create_tweet)
-# schedule.every().hour.at(f":{posting_time}").do(upload_image_and_create_tweet)
+schedule.every().hour.at(f":{posting_time}").do(upload_image_and_create_tweet)
 
 print("Bot started...")
 
